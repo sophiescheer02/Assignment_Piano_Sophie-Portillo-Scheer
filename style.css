@@ -1,5 +1,27 @@
-html {
-    font-family:'Times New Roman', Times, serif;
+
+html{
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
 }
+
+.white {
+    width: 90px;
+    background-color: white;
+    border: 1px solid black;
+    
+}
+
+.black {
+    width: 85px;
+    background-color: black;
+    border: 1px solid black;
+   
+    
+    
+}
+
+
+
+
+
 
