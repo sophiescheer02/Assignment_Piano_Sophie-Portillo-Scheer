@@ -23,6 +23,24 @@ a3?.addEventListener('click', function () {
 });
 
 
+function playAudio(ton: string) {
+  const audio = new Audio('./samples_' + ton + '.mp3');
+  audio.play();
+  //console.log('clicked');
+}
 
+function activateButton(ton: string) {
+  ton?.classList.add('active');
+  setTimeout(deactivateButton, 200);
+}
 
+function activateButton2() {
+  a3?.classList.add('active');
+  setTimeout(deactivateButton, 200);
+}
+
+function deactivateButton(ton: string) {
+  a3?.classList.remove('active');
+  a3?.classList.remove('active');
+}
 
