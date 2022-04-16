@@ -15,9 +15,11 @@ html{
     width: 85px;
     background-color: black;
     border: 1px solid black;
-   
     
-    
+}
+
+.active {
+    background-color: #db02d0;
 }
 
 
