@@ -6,11 +6,20 @@
 let c3 = document.querySelector('#c3');
 let a3 = document.querySelector('#a3');
 let keyw = document.querySelectorAll('.key.white');
-let keyb = document.querySelector('.key.black');
+let keyb = document.querySelectorAll('.key.black');
 let key;
 let ton = "init";
 
 keyw?.forEach(key => {
+  key.addEventListener("click", () => {
+    const ton = key.getAttribute("id");
+    playAudio(ton as string);
+    activateButton(ton as string);
+    console.log(ton);
+  });
+})
+
+keyb?.forEach(key => {
   key.addEventListener("click", () => {
     const ton = key.getAttribute("id");
     playAudio(ton as string);
@@ -40,7 +49,7 @@ function playAudio(ton: string) {
 }
 
 function activateButton(ton: string) {
-  ton?.classList.add('active'); 
+  //ton?.classList.add('active'); 
   setTimeout(deactivateButton, 200);
 }
 
