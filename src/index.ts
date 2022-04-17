@@ -3,10 +3,19 @@
 //import { helloWorld, Beispiel } from "./myModule";
 //import { alertMe } from "./myOtherModule";
 
-let allkeys = ['c3', 'a3'];
-let ton;
 let c3 = document.querySelector('#c3');
 let a3 = document.querySelector('#a3');
+let keyw = document.querySelectorAll('.key.white');
+let keyb = document.querySelector('.key.black');
+let key;
+
+keyw?.forEach(key => {
+  key.addEventListener("click", () => {
+    const ton = (<HTMLInputElement>document.getElementById(key.id)).value;
+    playAudio(ton);
+    activateButton(ton);
+  });
+})
 
 
 /* c3?.addEventListener('click', function () {
@@ -15,21 +24,21 @@ let a3 = document.querySelector('#a3');
   activateButton(ton);
 }); */
 
-a3?.addEventListener('click', function () {
+/*a3?.addEventListener('click', function () {
   let ton = "a3";
   playAudio(ton);
   activateButton(ton);
-});
+}); */
 
 
 function playAudio(ton: string) {
-  const audio = new Audio('./samples_' + ton + '.mp3');
+  const audio = new Audio('./src/Sound/samples_' + ton + '.mp3');
   audio.play();
   //console.log('clicked');
 }
 
 function activateButton(ton: string) {
-  ton?.classList.add('active');
+  /*ton?.classList.add('active'); */
   setTimeout(deactivateButton, 200);
 }
 
