@@ -18,8 +18,12 @@ html{
     
 }
 
-.active {
+.activeWhite {
     background-color: #db02d0;
+}
+
+.activeBlack {
+    background-color: #f93;
 }
 
 

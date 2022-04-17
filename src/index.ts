@@ -46,13 +46,21 @@ function playAudio(ton: string) {
 }
 
 function activateButton(key: Element) {
-  key.classList.add('active'); 
-  setTimeout(deactivateButton, 300, key);
+  let color = key.getAttribute("class");
+  if (color == 'key black') {
+    key.classList.add('activeBlack'); 
+ 
+  } else {
+    key.classList.add('activeWhite');
+  }
+
+  setTimeout(deactivateButton, 250, key);
   
 }
 
 
 function deactivateButton(key: Element): void {
- key.classList.remove('active');
+ key.classList.remove('activeWhite');
+ key.classList.remove('activeBlack');
 }
 
