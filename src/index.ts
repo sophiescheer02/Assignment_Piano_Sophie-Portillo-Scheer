@@ -8,6 +8,7 @@ let a3 = document.querySelector('#a3');*/
 let linkKeyToTon: string[] = [];
 let keyw = document.querySelectorAll('.key.white');
 let keyb = document.querySelectorAll('.key.black');
+let showkeynotes = document.getElementById('note');
 /*let ton = "init";*/
 
 keyw?.forEach(key => {
@@ -76,6 +77,7 @@ document.addEventListener("keydown", e => {
 function playAudio(ton: string) {
   const audio = new Audio('./src/Sound/samples_' + ton + '.mp3');
   audio.play();
+  shownote(ton);
   //console.log('clicked');
 }
 
@@ -98,6 +100,10 @@ function activateButton(key: Element) {
 function deactivateButton(key: Element): void {
  key.classList.remove('activeWhite');
  key.classList.remove('activeBlack');
+}
+
+function shownote(ton: String){
+  document.getElementById('note')?.innerHTML = "Test";
 }
 
 

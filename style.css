@@ -7,7 +7,7 @@ html{
 
 .piano {
     display: flex;
-    margin-top: 200px;
+    margin-top: 300px;
     margin-left: 100px;
     position: relative;
     top: -40px;
@@ -41,6 +41,22 @@ html{
     border-radius: 10px;
     color: white;
     
+}
+
+.shownotes {
+    font-size: 120px;
+    line-height: 1;
+    color: #eee;
+    text-shadow: 0 0 5rem #028ae9;
+    transition: all .07s ease;
+    min-height: 120px;
+  }
+
+.label {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: ;
+    font-size: 25px;
+    margin-top: 300px;
 }
 
 .activeWhite {
