@@ -4,17 +4,36 @@ html{
     text-align: center;
 }
 
+
+.piano {
+    display: flex;
+    margin-top: 200px;
+    margin-left: 100px;
+    position: relative;
+    top: -40px;
+}
+
+.key {
+    height: calc(var(--width)*4);
+    width: var(--width);
+}
+
 .white {
-    width: 90px;
+    --width: 75px;
     background-color: white;
-    border: 1px solid black;
-    
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 .black {
-    width: 85px;
+    --width: 50px;
     background-color: black;
-    border: 1px solid black;
+    border: 2px solid black;
+    margin-left: calc(var(--width)/-2);
+    margin-right: calc(var(--width)/-2);
+    z-index: 1;
+    border-radius: 10px;
+    color: white;
     
 }
 

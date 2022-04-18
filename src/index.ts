@@ -9,6 +9,7 @@ let keyw = document.querySelectorAll('.key.white');
 let keyb = document.querySelectorAll('.key.black');
 let ton = "init";
 
+
 keyw?.forEach(key => {
   key.addEventListener("click", () => {
     const ton = key.getAttribute("id");
@@ -45,6 +46,8 @@ function playAudio(ton: string) {
   //console.log('clicked');
 }
 
+
+
 function activateButton(key: Element) {
   let color = key.getAttribute("class");
   if (color == 'key black') {
@@ -63,4 +66,6 @@ function deactivateButton(key: Element): void {
  key.classList.remove('activeWhite');
  key.classList.remove('activeBlack');
 }
+
+
 
