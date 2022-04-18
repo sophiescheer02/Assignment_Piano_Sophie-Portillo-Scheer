@@ -12,13 +12,15 @@ html{
     position: relative;
     top: -40px;
 }
-
+ /* height: calc(var(--width)*4);
+    width: var(--width); Fremdcode zum stylen des Klaviers, damit Tasten nebeneinander sind*/
 .key {
     height: calc(var(--width)*4);
     width: var(--width);
 }
 
 .white {
+    /* --width: 75px;Fremdcode zum stylen des Klavies bzw. der weißen Tasten*/
     --width: 75px;
     background-color: white;
     border: 2px solid black;
@@ -26,9 +28,13 @@ html{
 }
 
 .black {
+
+    /*--width: 50px; Fremdcode zum stylen des Klavies bzw. der schwarzen Tasten */
     --width: 50px;
     background-color: black;
     border: 2px solid black;
+    /* margin-left: calc(var(--width)/-2);
+    margin-right: calc(var(--width)/-2); Fremdcode zum stylen des Klavies, damit Tasten an weißen Tasten ausgerichtet sind*/
     margin-left: calc(var(--width)/-2);
     margin-right: calc(var(--width)/-2);
     z-index: 1;
