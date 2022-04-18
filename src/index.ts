@@ -42,11 +42,21 @@ keyb?.forEach(key => {
 
 
 document.addEventListener("keydown", e => {
+  if (e.repeat) return; 
   const x = e.key;
+  linkKeyToTon.forEach(value => {
+    if (value == x) {
+      const position = linkKeyToTon.indexOf(value);
+      const playSound = linkKeyToTon[position-1]; 
+      playAudio(playSound as string);
+      let bta = document.getElementById(playSound);
+      activateButton(bta as HTMLElement);
+    }
+    
+  })
   //const ton = key.getAttribute("keyid");
     //playAudio(ton as string);
     //activateButton(key);
-  console.log(x);
   });
 
 
