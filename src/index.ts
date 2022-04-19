@@ -9,6 +9,7 @@ let linkKeyToTon: string[] = [];
 let keyw = document.querySelectorAll('.key.white');
 let keyb = document.querySelectorAll('.key.black');
 let showkeynotes = document.getElementById('note');
+let note = document.querySelector(".shownotes");
 /*let ton = "init";*/
 
 keyw?.forEach(key => {
@@ -103,7 +104,11 @@ function deactivateButton(key: Element): void {
 }
 
 function shownote(ton: String){
-  document.getElementById('note')?.innerHTML = "Test";
+  const test = document.getElementById('note');
+  const test2 = test as HTMLElement;
+  const note2 = note as HTMLElement;
+  test2.innerHTML = "ton";
+  console.log(test2);
 }
 
 
