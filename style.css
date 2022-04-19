@@ -24,7 +24,7 @@ html{
     --width: 75px;
     background-color: white;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .black {
@@ -38,7 +38,7 @@ html{
     margin-left: calc(var(--width)/-2);
     margin-right: calc(var(--width)/-2);
     z-index: 1;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
     
 }
@@ -47,14 +47,14 @@ html{
     font-size: 120px;
     line-height: 1;
     color: black;
-    text-shadow: 0 0 5rem #028ae9;
+    text-shadow: 0 0 5rem red;
     transition: all .07s ease;
     min-height: 120px;
   }
 
 .label {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: ;
+    text-align: 100px;
     font-size: 25px;
     margin-top: 300px;
 }
