@@ -103,12 +103,22 @@ function deactivateButton(key: Element): void {
  key.classList.remove('activeBlack');
 }
 
-function shownote(ton: String){
+function shownote(ton: string){
+  let ton_final;
   const test = document.getElementById('note');
   const test2 = test as HTMLElement;
   const note2 = note as HTMLElement;
-  test2.innerHTML = "ton";
-  console.log(test2);
+  
+  if (ton.charAt(1) == "-"){
+
+    ton_final = ton.charAt(0).toUpperCase() + ton.charAt(2) +"#";
+
+  }else{
+
+    ton_final = ton.toUpperCase();
+
+  }
+  test2.innerHTML = ton_final as string;
 }
 
 
