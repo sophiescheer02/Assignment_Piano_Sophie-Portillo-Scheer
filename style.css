@@ -8,7 +8,8 @@ html{
 .piano {
     display: flex;
     margin-top: 300px;
-    margin-left: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
     position: relative;
     top: -40px;
 }
@@ -50,16 +51,18 @@ html{
     text-shadow: 0 0 5rem red;
     transition: all .07s ease;
     min-height: 120px;
+    margin-top: 200px;
   }
 
 .label {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 3;
     position: relative;
     top: 80%;
     text-align: center;
     font-size: larger;
     font-weight: bold;
-    border-color: green;
+    /*border-color: green;
     border-width: 15px;
     border-style: solid;
     opacity: 0.4;
@@ -67,7 +70,8 @@ html{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-
+}*/
+    
 }
 
 .activeWhite {

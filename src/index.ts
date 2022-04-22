@@ -10,6 +10,11 @@ let keyw = document.querySelectorAll('.key.white');
 let keyb = document.querySelectorAll('.key.black');
 let showkeynotes = document.getElementById('note');
 let note = document.querySelector(".shownotes");
+
+
+let piano_checked = document.getElementById("Piano") as HTMLInputElement;
+let organ_soul_checked = document.getElementById("Soul Organ") as HTMLInputElement;
+
 /*let ton = "init";*/
 
 keyw?.forEach(key => {
@@ -62,24 +67,22 @@ document.addEventListener("keydown", e => {
   });
 
 
-/* c3?.addEventListener('click', function () {
-  const ton = "c3";
-  playAudio(ton);
-  activateButton(ton);
-}); */
-
-/*a3?.addEventListener('click', function () {
-  let ton = "a3";
-  playAudio(ton);
-  activateButton(ton);
-}); */
-
 
 function playAudio(ton: string) {
-  const audio = new Audio('./src/Sound/samples_' + ton + '.mp3');
-  audio.play();
+  
+  if (piano_checked.checked) {
+    const audio = new Audio('./src/Sound/samples_' + ton + '.mp3');
+    audio.play();
+  } else if (organ_soul_checked.checked) {
+    const audio = new Audio('./src/Organ/samples_' + ton + '.m4a');
+    audio.play();
+  } else{
+    const audio = new Audio('./src/HeavyMetalOrgan/samples_' + ton + '.m4a');
+    audio.play();
+  }
+  //const audio = new Audio('./src/Sound/samples_' + ton + '.mp3');
+  
   shownote(ton);
-  //console.log('clicked');
 }
 
 
@@ -107,19 +110,18 @@ function shownote(ton: string){
   let ton_final;
   const test = document.getElementById('note');
   const test2 = test as HTMLElement;
-  const note2 = note as HTMLElement;
+  //const note2 = note as HTMLElement;
   
   if (ton.charAt(1) == "-"){
 
     ton_final = ton.charAt(0).toUpperCase() + ton.charAt(2) +"#";
 
-  }else{
+  } else {
 
     ton_final = ton.toUpperCase();
 
   }
   test2.innerHTML = ton_final as string;
 }
-
 
 
