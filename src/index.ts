@@ -76,7 +76,7 @@ function playAudio(ton: string) {
   } else if (organ_soul_checked.checked) {
     const audio = new Audio('./src/Organ/samples_' + ton + '.m4a');
     audio.play();
-  } else{
+  } else {
     const audio = new Audio('./src/HeavyMetalOrgan/samples_' + ton + '.m4a');
     audio.play();
   }
