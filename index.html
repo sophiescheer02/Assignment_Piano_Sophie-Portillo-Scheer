@@ -16,40 +16,55 @@
 <body>
     <section id="control">
         <div>
-            <input type="radio" id="Piano" name="test" checked="true"> 
+            <input type="radio" id="Piano" name="controlSounds" checked="true">
             <label for="Piano">Piano</label><br>
-            <input type="radio" id="Soul Organ" name="test">
+            <input type="radio" id="Soul Organ" name="controlSounds" >
             <label for="Soul Organ">Soul Organ</label><br>
-            <input type="radio" id="Heavy Metal Organ" name="test">
-            <label for="Heavy Metal Organ">Heavy Metal Organ</label>
+        </div>
+        <div>
+            <input type="checkbox" id="activeNote" name="controlLabel" value="noteOnKey" checked="true">
+            <label for="activeNote"> Show notes on keys</label><br>
+            <input type="checkbox" id="activeKeys" name="controlLabel" value="onlyKey" checked="true">
+            <label for="activeKeys"> Show keys </label><br>
+        </div>
+    </section>
+    <section>
+        <div class="shownotes" id="note">
+            <p>Your Notes...</p>
         </div>
     </section>
     <section id = "piano keys">
-        <div class="shownotes" id="note"></div>
+
         <div class="piano">
 
             <div class="key white" id="c3"  keyid="1">
-                <span class="label">1</span>
+                <span class="labelwhite">1</span>
+                <span class="notelabelWhite">C3</span>
             </div>
 
             <div class="key black" id="c-3"  keyid="2">
-                <span class="label">2</span>
+                <span class="labelblack">2</span>
+                <span class="notelabelBlack">C3#</span>
             </div>
 
             <div class="key white" id="d3" keyid="3">
-                <span class="label">3</span>
+                <span class="labelwhite">3</span>
+                <span class="notelabelWhite">D3</span>
             </div>
 
             <div class="key black" id="d-3"  keyid="4"> 
-                <span class="label">4</span>
+                <span class="labelblack">4</span>
+                <span class="notelabelBlack">D3#</span>
             </div>
 
             <div class="key white" id="e3"  keyid="5">
                 <span class="label">5</span>
+                <span class="notelabel">E3</span>
             </div>
 
             <div class="key white" id="f3"  keyid="6">
                 <span class="label">6</span>
+                <span class="notelabel">F3</span>
             </div>
             
             <div class="key black" id="f-3"  keyid="7">
@@ -64,11 +79,11 @@
                 <span class="label">9</span>
             </div>
 
-            <div class="key white" id="a4"  keyid="0">
+            <div class="key white" id="a3"  keyid="0">
                 <span class="label">0</span>
             </div>
 
-            <div class="key black" id="a-4"  keyid="ß">
+            <div class="key black" id="a-3"  keyid="ß">
                 <span class="label">ß</span>
             </div>
 
@@ -112,15 +127,15 @@
                 <span class="label">y</span>
             </div>
 
-            <div class="key white" id="a5"  keyid="h">
+            <div class="key white" id="a4"  keyid="h">
                 <span class="label">h</span>
             </div>
 
-            <div class="key black" id="a-5"  keyid="u">
+            <div class="key black" id="a-4"  keyid="u">
                 <span class="label">u</span>
             </div>
 
-            <div class="key white" id="b5"  keyid="j">
+            <div class="key white" id="b4"  keyid="j">
                 <span class="label">j</span>
             </div>
 
@@ -160,15 +175,15 @@
                 <span class="label">.</span>
             </div>
 
-            <div class="key white" id="a7"  keyid="-">
+            <div class="key white" id="a5"  keyid="-">
                 <span class="label">-</span>
             </div>
 
-            <div class="key black" id="b-7"  keyid=";">
+            <div class="key black" id="b-5"  keyid=";">
                 <span class="label">;</span>
             </div>
 
-            <div class="key white" id="b7"  keyid="+">
+            <div class="key white" id="b5"  keyid="+">
                 <span class="label">+</span>
             </div>
 
@@ -181,9 +196,7 @@
         </div>
     </section>
 
-
-    <!-- <audio id="audio"  src="samples_c3.mp3"></audio> -->
-    <!-- <audio data-key="2" src="samples_c-3.mp3"></audio> -->
+    
 </body>
 
 </html>

@@ -15,7 +15,61 @@ let note = document.querySelector(".shownotes");
 let piano_checked = document.getElementById("Piano") as HTMLInputElement;
 let organ_soul_checked = document.getElementById("Soul Organ") as HTMLInputElement;
 
-/*let ton = "init";*/
+let activeNotes = document.getElementById("activeNote") as HTMLInputElement;
+let activeKeys = document.getElementById("activeKeys") as HTMLInputElement;
+
+
+let checkboxes = document.querySelectorAll("input[type=checkbox][name=controlLabel]");
+
+checkboxes.forEach(function(checkbox) {
+  checkbox.addEventListener('change', function() {
+    if (activeNotes.checked && activeKeys.checked == false) {
+      //tees.style.visibility = "visible";
+      //test.style.add= ("visible");
+      console.log("Notn aktiv, Tastatur nicht");
+ 
+    } else if (activeKeys.checked && activeNotes.checked == false) {
+ 
+      console.log("Noten nicht aktiv, Tastatur schon");
+ 
+    } else if (activeNotes.checked && activeKeys.checked){
+      console.log("Notn aktiv, Tastatur auch");
+    } else {
+      console.log("So ein Quark");
+    }
+  })
+});
+
+function toggleBoxVisibility() {
+  let tees = document.getElementById("c3") as HTMLElement
+  //let test = document.getElementByClassName("notelabelBlack") as HTMLCollectionOf<HTMLElement>;
+
+  if (activeNotes.checked && activeKeys.checked == false) {
+     tees.style.visibility = "visible";
+     //test.style.add= ("visible");
+     console.log("Notn aktiv, Tastatur nicht");
+  
+      } 
+  else if (activeKeys.checked && activeNotes.checked == false) {
+  
+    console.log("Noten nicht aktiv, Tastatur schon");
+  
+    }
+  else if (activeNotes.checked && activeKeys.checked){
+    console.log("Notn aktiv, Tastatur auch");
+
+  }
+  else{
+
+
+  }
+  }
+
+
+
+
+
+
 
 keyw?.forEach(key => {
   let x = key.getAttribute("id")
@@ -73,11 +127,8 @@ function playAudio(ton: string) {
   if (piano_checked.checked) {
     const audio = new Audio('./src/Sound/samples_' + ton + '.mp3');
     audio.play();
-  } else if (organ_soul_checked.checked) {
-    const audio = new Audio('./src/Organ/samples_' + ton + '.m4a');
-    audio.play();
   } else {
-    const audio = new Audio('./src/HeavyMetalOrgan/samples_' + ton + '.m4a');
+    const audio = new Audio('./src/Organ/samples_' + ton + '.m4a');
     audio.play();
   }
   //const audio = new Audio('./src/Sound/samples_' + ton + '.mp3');
@@ -110,7 +161,6 @@ function shownote(ton: string){
   let ton_final;
   const test = document.getElementById('note');
   const test2 = test as HTMLElement;
-  //const note2 = note as HTMLElement;
   
   if (ton.charAt(1) == "-"){
 
@@ -123,5 +173,7 @@ function shownote(ton: string){
   }
   test2.innerHTML = ton_final as string;
 }
+
+
 
 
