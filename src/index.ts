@@ -61,7 +61,63 @@ checkboxes.forEach(function(checkbox) {
       }
       console.log("Noten aktiv, Tastatur aktiv");
  
+      
 
+    } else if (activeNotes.checked == false && activeKeys.checked){
+      if(notesToChange.length != 0){
+        for (let i = 0; i < notesToChange.length; i++) { 
+          notesToChange[i].style.visibility = "hidden";
+        }
+      }
+      if(keysToChange.length != 0){
+        for (let j = 0; j < keysToChange.length; j++) { 
+          keysToChange[j].style.visibility = "visible";
+        }
+      }
+      console.log("Noten inaktiv, Tastatur aktiv");
+
+
+
+    } else {
+      if(notesToChange.length != 0){
+        for (let i = 0; i < notesToChange.length; i++) { 
+          notesToChange[i].style.visibility = "hidden";
+        }
+      }
+      if(keysToChange.length != 0){
+        for (let j = 0; j < keysToChange.length; j++) { 
+          keysToChange[j].style.visibility = "hidden";
+        }
+      }
+      console.log("Noten inaktiv, Tastatur inaktiv");
+    }
+  })
+});
+
+function toggleBoxVisibility() {
+  let tees = document.getElementById("c3") as HTMLElement
+  //let test = document.getElementByClassName("notelabelBlack") as HTMLCollectionOf<HTMLElement>;
+
+  if (activeNotes.checked && activeKeys.checked == false) {
+     tees.style.visibility = "visible";
+     //test.style.add= ("visible");
+     console.log("Notn aktiv, Tastatur nicht");
+  
+      } 
+  else if (activeKeys.checked && activeNotes.checked == false) {
+  
+    console.log("Noten nicht aktiv, Tastatur schon");
+  
+    }
+  else if (activeNotes.checked && activeKeys.checked){
+    console.log("Notn aktiv, Tastatur auch");
+
+  }
+  else{
+
+
+  }
+}
 
 
 keyw?.forEach(key => {
