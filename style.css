@@ -19,9 +19,9 @@ h2 {
     color:white;
 }
 
-body{
+body {
     background-image: url("Klavier_Hintergrund.png"); 
-    }
+}
 
 .piano {
     display: flex;
@@ -154,5 +154,8 @@ body{
 }
 
 
-
+.control {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 200px;
+}
 
