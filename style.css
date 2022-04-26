@@ -21,7 +21,7 @@ h2 {
 
 body {
     background-image: url("Klavier_Hintergrund.png"); 
-    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .piano {
@@ -31,6 +31,8 @@ body {
     margin-right: 50px;
     position: relative;
     top: -40px;
+    size: relative;
+    overflow-x: auto;
 }
  /* height: calc(var(--width)*4);
     width: var(--width); Fremdcode zum stylen des Klaviers, damit Tasten nebeneinander sind*/
@@ -45,6 +47,7 @@ body {
     background-color: white;
     border: 2px solid black;
     border-radius: 5px;
+    min-width: 50px;
 }
 
 .black {
@@ -60,6 +63,7 @@ body {
     z-index: 1;
     border-radius: 5px;
     color: white;
+    min-width: 40px;
     
 }
 
