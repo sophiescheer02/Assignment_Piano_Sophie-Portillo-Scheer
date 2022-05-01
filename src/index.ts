@@ -1,15 +1,15 @@
 
 
-import { activateButton} from "./changeKeyColor";
+import { activateColorButton} from "./changeKeyColor";
 import { playAudio} from "./playAudio";
-import { shownote } from "./shownote";
-import { toggleVisibility } from "./toggleVisibility";
-import {curtainOpen} from "./curtain";
+import { displayNoteObovePiano } from "./displayNoteObovePiano";
+import { toggleVisibility } from "./toggleVisibilityOfKeys";
+//import {curtainOpen} from "./curtain";
 
-document.addEventListener('onload', focus);
+/*document.addEventListener('onload', focus);
 document.addEventListener('keydown', e => {
   curtainOpen (e as unknown as HTMLElement);
-});
+});*/
 
 let linkKeyToTon: string[] = [];
 let keyw = document.querySelectorAll('.key.white');
@@ -21,16 +21,16 @@ let checkboxes = document.querySelectorAll("input[type=checkbox][name=controlLab
 
 // Zuordnung Ton zu Tastatur für schwarze und weiße Tasten
 keyw.forEach(key => {
-  let x = key.getAttribute("id")
-  let z = key.getAttribute("keyid")
-  linkKeyToTon.push(x as string, z as string);
+  let id = key.getAttribute("id")
+  let keyId = key.getAttribute("keyid")
+  linkKeyToTon.push(id as string, keyId as string);
   console.log(linkKeyToTon);
 })
 
 keyb.forEach(key => {
-  let x = key.getAttribute("id")
-  let z = key.getAttribute("keyid")
-  linkKeyToTon.push(x as string, z as string);
+  let id = key.getAttribute("id")
+  let keyId = key.getAttribute("keyid")
+  linkKeyToTon.push(id as string, keyId as string);
   console.log(linkKeyToTon);
 })
 
@@ -39,39 +39,51 @@ keyb.forEach(key => {
 keyw.forEach(key => {
   key.addEventListener("click", () => {
     const ton = key.getAttribute("id");
-    playAudio(ton as string);
-    shownote(ton as string);
-    activateButton(key);
+    if(ton){
+
+    playAudio(ton);
+    displayNoteObovePiano(ton);
+    activateColorButton(key);
+
+    }
+    
   });
 })
 
 keyb.forEach(key => {
   key.addEventListener("click", () => {
     const ton = key.getAttribute("id");
-    playAudio(ton as string);
-    shownote(ton as string);
-    activateButton(key);
+    if(ton){
+
+    playAudio(ton);
+    displayNoteObovePiano(ton);
+    activateColorButton(key);
+
+    }
+   
   });
 })
 
 // Steuerung per Tastatur 
 document.addEventListener("keydown", e => {
   if (e.repeat) return; 
-  const x = e.key;
+  const keyControl = e.key;
   linkKeyToTon.forEach(value => {
-    if (value == x) {
+    if (value == keyControl) {
       const position = linkKeyToTon.indexOf(value);
-      const playSound = linkKeyToTon[position-1]; 
-      playAudio(playSound as string);
-      shownote(playSound as string);
-      let bta = document.getElementById(playSound);
-      activateButton(bta as HTMLElement);
+      const playSound = linkKeyToTon[position-1];
+
+      if(playSound){
+      playAudio(playSound);
+      displayNoteObovePiano(playSound);
+      }
+      
+      let buttonIsActive = document.getElementById(playSound);
+      activateColorButton(buttonIsActive as HTMLElement);
     }
     
   })
-  //const ton = key.getAttribute("keyid");
-    //playAudio(ton as string);
-    //activateButton(key);
+
   });
 
 //Boxen zum steuern, ob auf der Tastatur Töne und Steuerungstasten angezeigt werden sollen 
