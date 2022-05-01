@@ -1,6 +1,6 @@
 
 
-export function activateButton(key: Element) {
+export function activateColorButton(key: Element) {
   let color = key.getAttribute("class");
   if (color == 'key black') {
     key.classList.add('activeBlack'); 
@@ -9,12 +9,12 @@ export function activateButton(key: Element) {
     key.classList.add('activeWhite');
   }
 
-  setTimeout(deactivateButton, 250, key);
+  setTimeout(deactivateColorButton, 250, key);
   
 }
 
 
-function deactivateButton(key: Element): void {
+function deactivateColorButton(key: Element): void {
  key.classList.remove('activeWhite');
  key.classList.remove('activeBlack');
 }
