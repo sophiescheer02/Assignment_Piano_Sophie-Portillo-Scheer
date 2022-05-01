@@ -20,8 +20,12 @@ h2 {
 }
 
 body {
-    background-image: url("Klavier_Hintergrund.png"); 
+    
+    background-image: url("Klavier_Hintergrund.png");
+    background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .piano {
@@ -32,13 +36,14 @@ body {
     position: relative;
     top: -40px;
     size: relative;
-    overflow-x: auto;
+    /*overflow-x: auto;*/
 }
  /* height: calc(var(--width)*4);
     width: var(--width); Fremdcode zum stylen des Klaviers, damit Tasten nebeneinander sind*/
 .key {
     height: calc(var(--width)*4);
     width: var(--width);
+
 }
 
 .white {
@@ -69,13 +74,13 @@ body {
 
 .shownotes {
     font-family:'Times New Roman', Times, serif;
-    font-size:60px;
+    font-size:40px;
     line-height: 1;
     color: white;
     transition: all .07s ease;
     min-height: 10px;
     visibility: visible;
-    margin-top: 70px;
+    margin-top: 60px;
   }
 
 .labelwhite {
@@ -88,7 +93,7 @@ body {
     font-weight: bold;
     display: block;
     visibility: visible;
-    /*border-color: green;*/
+    z-index: 1;
 }
 
 .labelblack{
@@ -101,12 +106,13 @@ body {
     font-weight: bold;
     display: block;
     visibility: visible;
+    z-index: 1;
 
 }
 
 .notelabelWhite{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    z-index: 3;
+    z-index: 1;
     position: relative;
     top: 80%;
     text-align: center;
@@ -114,16 +120,6 @@ body {
     font-weight: bold;
     display: block;
     visibility: visible;
-    /*width: 20px;
-    padding-left: 10px;
-    border-color: greenyellow;
-    border-width: 3px;
-    border-style: solid;
-    opacity: 1;
-    border-top-right-radius: 2px;
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;*/
     
 }
 
@@ -137,16 +133,7 @@ body {
     font-weight: bold;
     display: block;
     visibility: visible;
-    /*width: 20px;
-    padding-left: 10px;
-    border-color: greenyellow;
-    border-width: 3px;
-    border-style: solid;
-    opacity: 1;
-    border-top-right-radius: 2px;
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;*/
+    z-index: 3;
     
 }
 
@@ -159,8 +146,21 @@ body {
 }
 
 
-.control {
+#control {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 200px;
+    margin-top: 10px;
 }
+#control .radio{
+    size: 100px;
+    border: violet;
+}
+
+.input{
+    visibility: visible;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
 

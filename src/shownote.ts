@@ -1,5 +1,3 @@
-// THIS IS A MODULE
-
 
 export function shownote(ton: string){
   let ton_final;

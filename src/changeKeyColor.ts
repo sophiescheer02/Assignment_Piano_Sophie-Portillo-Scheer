@@ -1,6 +1,4 @@
-//THIS MODULE WILL BE TREESHAKED CAUSE ITS FUNCTIONS ARENT USED
 
-//will not show up in the bundle
 
 export function activateButton(key: Element) {
   let color = key.getAttribute("class");
