@@ -47,7 +47,7 @@ body {
 }
 
 .white {
-    /* --width: 75px;Fremdcode zum stylen des Klavies bzw. der weißen Tasten*/
+    /* --width: 75px;Fremdcode zum stylen des Klavies bzw. der weiÃŸen Tasten*/
     --width: 80px;
     background-color: white;
     border: 2px solid black;
@@ -62,7 +62,7 @@ body {
     background-color: black;
     border: 2px solid black;
     /* margin-left: calc(var(--width)/-2);
-    margin-right: calc(var(--width)/-2); Fremdcode zum stylen des Klavies, damit Tasten an weißen Tasten ausgerichtet sind*/
+    margin-right: calc(var(--width)/-2); Fremdcode zum stylen des Klavies, damit Tasten an weiÃŸen Tasten ausgerichtet sind*/
     margin-left: calc(var(--width)/-2);
     margin-right: calc(var(--width)/-2);
     z-index: 1;
@@ -163,4 +163,60 @@ body {
     margin-bottom: 200px;
 }
 
+/* teilweise Fremdcode*/
+/* Curtain */
 
+#begin {
+	z-index: 3;
+	position: absolute;
+	top: 45%;
+	left: 35%;
+	width: auto;
+	height: auto;
+	text-align: center;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 3em;
+	font-weight: 400;
+}
+
+#show {
+	position: center;
+	top: 45%;
+    bottom: 20%;
+	left: 10%;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+#openCurtain {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+    z-index: 2;
+	
+}
+
+#openCurtain .left,
+#openCurtain .right {
+	position: absolute;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	filter: brightness(250%);
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/950358/curtain.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+    z-index: 2;
+}
+
+#openCurtain .left {
+	left: 0;
+	transform-origin: top right;
+}
+#openCurtain .right {
+	left: 50%;
+	transform-origin: top left;
+}
