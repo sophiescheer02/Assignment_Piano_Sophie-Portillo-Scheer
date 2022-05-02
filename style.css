@@ -220,3 +220,53 @@ body {
 	left: 50%;
 	transform-origin: top left;
 }
+
+
+/*Open the curtain*/
+
+#show.extend {
+	width: 140%;
+	left: -20%;
+	margin-left: 0;
+	animation-fill-mode: forwards;
+	animation-duration: 2.5s, 1.5s;
+	animation-timing-function: ease-in-out, ease-in-out;
+	animation-delay: 0s, 2.5s;
+	animation-iteration-count: 1, 1;
+	animation-direction: normal, normal;
+}
+
+#openCurtain.open .left,
+#openCurtain.open .right {
+	filter: brightness(150%);
+}
+#openCurtain.open .left {
+	animation-fill-mode: forwards;
+	animation-name: curtain-opening, left-curtain-opening;
+	animation-duration: 2s, 4s;
+	animation-timing-function: ease-in-out, ease-in-out;
+	animation-delay: 0s, 0s;
+	animation-iteration-count: 1, 1;
+	animation-direction: normal, normal;
+}
+#openCurtain.open .right {
+	animation-fill-mode: forwards;
+	animation-name: curtain-opening, right-curtain-opening;
+	animation-duration: 2s, 4s;
+	animation-timing-function: ease-in-out, ease-in-out;
+	animation-delay: 0s, 0s;
+	animation-iteration-count: 1, 1;
+	animation-direction: normal, normal;
+}
+
+
+.hide {
+	animation-fill-mode: forwards;
+	animation-name: fade-out;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+}
+
