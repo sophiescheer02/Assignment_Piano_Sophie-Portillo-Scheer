@@ -4,7 +4,12 @@ import { activateColorButton} from "./changeKeyColor";
 import { playAudio} from "./playAudio";
 import { displayNoteObovePiano } from "./displayNoteObovePiano";
 import { toggleVisibility } from "./toggleVisibilityOfKeys";
+import {curtainOpenWithEnter} from "./curtain";
 
+document.addEventListener('onload', focus);
+document.addEventListener('keydown', e => {
+  curtainOpenWithEnter (e);
+});
 
 let linkKeyToTon: string[] = [];
 let keyw = document.querySelectorAll('.key.white');
