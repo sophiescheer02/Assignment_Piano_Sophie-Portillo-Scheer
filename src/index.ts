@@ -6,6 +6,7 @@ import { displayNoteObovePiano } from "./displayNoteObovePiano";
 import { toggleVisibility } from "./toggleVisibilityOfKeys";
 import {curtainOpenWithEnter} from "./curtain";
 
+/*Inspiration von Codepen.io*/
 document.addEventListener('onload', focus);
 document.addEventListener('keydown', e => {
   curtainOpenWithEnter (e as unknown as HTMLElement);
