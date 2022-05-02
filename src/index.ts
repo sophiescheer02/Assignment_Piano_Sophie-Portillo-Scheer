@@ -8,7 +8,7 @@ import {curtainOpenWithEnter} from "./curtain";
 
 document.addEventListener('onload', focus);
 document.addEventListener('keydown', e => {
-  curtainOpenWithEnter (e);
+  curtainOpenWithEnter (e as unknown as HTMLElement);
 });
 
 let linkKeyToTon: string[] = [];
