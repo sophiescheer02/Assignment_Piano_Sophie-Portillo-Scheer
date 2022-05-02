@@ -1,4 +1,4 @@
-import { forEachChild } from "../node_modules/typescript/lib/typescript";
+
 
 let activeNotes = document.getElementById("activeNote") as HTMLInputElement;
 let activeKeys = document.getElementById("activeKeys") as HTMLInputElement;
