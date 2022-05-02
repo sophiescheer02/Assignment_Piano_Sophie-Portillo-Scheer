@@ -1,3 +1,5 @@
+import { forEachChild } from "../node_modules/typescript/lib/typescript";
+
 let activeNotes = document.getElementById("activeNote") as HTMLInputElement;
 let activeKeys = document.getElementById("activeKeys") as HTMLInputElement;
 
@@ -13,32 +15,33 @@ const whiteKeysToChange = Array.from(document.getElementsByClassName("labelwhite
 
 
 
-export function toggleVisibility(){
+ export function toggleVisibility(){
 
     if (activeNotes.checked && activeKeys.checked == false) {
         if(notesToChange.length != 0){
-          for (let i = 0; i < notesToChange.length; i++) { 
-            notesToChange[i].style.visibility = "visible";
-          }
+          notesToChange.forEach(changeNote => {
+            changeNote.style.visibility = "visible";
+          })
         }
         if(keysToChange.length != 0){
-          for (let j = 0; j < keysToChange.length; j++) { 
-            keysToChange[j].style.visibility = "hidden";
-          }
+          keysToChange.forEach(changeKey => {
+            changeKey.style.visibility = "hidden";
+          })
         }
         console.log("Noten aktiv, Tastatur inaktiv");
    
   
       } else if (activeNotes.checked && activeKeys.checked) {
         if(notesToChange.length != 0){
-          for (let i = 0; i < notesToChange.length; i++) { 
-            notesToChange[i].style.visibility = "visible";
-          }
+          notesToChange.forEach(changeNote => {
+            changeNote.style.visibility = "visible";
+          })
         }
+
         if(keysToChange.length != 0){
-          for (let j = 0; j < keysToChange.length; j++) { 
-            keysToChange[j].style.visibility = "visible";
-          }
+          keysToChange.forEach(changeKey => {
+            changeKey.style.visibility = "visible";
+          })
         }
         console.log("Noten aktiv, Tastatur aktiv");
    
@@ -46,14 +49,16 @@ export function toggleVisibility(){
   
       } else if (activeNotes.checked == false && activeKeys.checked){
         if(notesToChange.length != 0){
-          for (let i = 0; i < notesToChange.length; i++) { 
-            notesToChange[i].style.visibility = "hidden";
-          }
+
+          notesToChange.forEach(changeNote => {
+            changeNote.style.visibility = "hidden";
+          })
         }
+
         if(keysToChange.length != 0){
-          for (let j = 0; j < keysToChange.length; j++) { 
-            keysToChange[j].style.visibility = "visible";
-          }
+          keysToChange.forEach(changeKey =>{
+            changeKey.style.visibility = "visible";
+          })
         }
         console.log("Noten inaktiv, Tastatur aktiv");
   
@@ -61,15 +66,17 @@ export function toggleVisibility(){
   
       } else {
         if(notesToChange.length != 0){
-          for (let i = 0; i < notesToChange.length; i++) { 
-            notesToChange[i].style.visibility = "hidden";
-          }
+          notesToChange.forEach(changeNote => {
+            changeNote.style.visibility = "hidden";
+          })
         }
+
         if(keysToChange.length != 0){
-          for (let j = 0; j < keysToChange.length; j++) { 
-            keysToChange[j].style.visibility = "hidden";
-          }
+          keysToChange.forEach(changeKey => {
+            changeKey.style.visibility = "hidden";
+          })
         }
         console.log("Noten inaktiv, Tastatur inaktiv");
       }
-}
+} 
+
