@@ -2,7 +2,7 @@
 //Import of all modules 
 import { activateColorButton} from "./changeKeyColor";
 import { playAudio} from "./playAudio";
-import { displayNoteObovePiano } from "./displayNoteAbovePiano";
+import { displayNoteAbovePiano } from "./displayNoteAbovePiano";
 import { toggleVisibility } from "./toggleVisibilityOfKeys";
 import { curtainOpenWithEnter } from "./curtain";
 
@@ -58,7 +58,7 @@ keyw.forEach(key => {
     if(ton){
 
     playAudio(ton);
-    displayNoteObovePiano(ton);
+    displayNoteAbovePiano(ton);
     activateColorButton(key);
 
     }
@@ -73,7 +73,7 @@ keyb.forEach(key => {
     if(ton){
 
     playAudio(ton);
-    displayNoteObovePiano(ton);
+    displayNoteAbovePiano(ton);
     activateColorButton(key);
 
     }
@@ -98,7 +98,7 @@ document.addEventListener("keydown", e => {
 
       if(playSound){
       playAudio(playSound);
-      displayNoteObovePiano(playSound);
+      displayNoteAbovePiano(playSound);
       }
       
       let buttonIsActive = document.getElementById(playSound);
