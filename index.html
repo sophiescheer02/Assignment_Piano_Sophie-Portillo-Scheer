@@ -2,9 +2,12 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Piano</title>
+
+    <!--Import of JavaScript and CSS-->
     <script defer src="./build/bundle.js" ></script>
     <link rel="stylesheet" href="style.css">
 
@@ -14,6 +17,7 @@
 </head>
 
 <body>
+    <!--Section for the styling ans animation of curtain-->
     <section id ="curtain">
         <div id="begin"> Hello little rockstar!
             <br/> - press ENTER to start the show -
@@ -25,6 +29,7 @@
   </div>
 </div>
 
+    <!--Section for the radion buttons and the checkboxes-->
     <section id="control">
         <div>
             <input type="radio" id="Piano" name="controlSounds" checked="true">
@@ -41,20 +46,30 @@
         </div>
     </section>
 
+    <!--Section for the display notes obove the piano -->
     <section>
         <div class="shownotes" id="note">
             <p>Your Notes...</p>
         </div>
     </section>
+
+    <!--Section for the piano-->
     <section id = "piano keys">
 
         <div class="piano">
 
+             <!--All keys and notes to operate the piano -->
+            <!--ID shows the reference of sound, keyid shows the key on the keyboard to operate the key-->
+            <!--labelblack and labelwhite show the label on the keyboard and make the instruction which key must be pressed for which sound-->
+            <!--notelabelWhite and notelabelBlack show the note on the keyboard and show the user which sound is pressed-->
+            <!--The black and white keys are in the same order as the order of a piano-->
+            <!--A differentiation is made between black and white keys, as both can be styled independently of each other in CSS-->
+            
             <div class="key white" id="c3"  keyid="a">
                 <span class="labelwhite">a</span>
                 <span class="notelabelWhite">C3</span>
             </div>
-
+            
             <div class="key black" id="c-3"  keyid="1">
                 <span class="labelblack">1</span>
                 <span class="notelabelBlack">C3#</span>
