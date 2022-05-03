@@ -1,8 +1,8 @@
 
 export function displayNoteObovePiano(ton: string){
   let soundFinal;
-  const note = document.getElementById('note');
-  const soundNote = note as HTMLElement;
+  const noteToDisplay = document.getElementById('note');
+  const soundNote = noteToDisplay as HTMLElement;
   
   if (ton.charAt(1) == "-"){
 
