@@ -1,24 +1,28 @@
-
+/* Styling for fonts, deklaration of a font-family, text is in the middel of the screen*/
 html{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
 }
 
+/* Styling of the labels on the piano keyboard,applies to all keys */
 label{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;   
 }
 
+/*Choose a font for the headline "Welcome to Spaceiano"*/
 h1{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
 }
 
+/* Choose a font for the headline "Use your keyboard and your mouse to play the piano" */
 h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color:white;
 }
 
+/* Integrating and aligning the background-image - createt by my selfe*/ 
 body {
     
     background-image: url("Klavier_Hintergrund.png");
@@ -28,6 +32,7 @@ body {
     background-size: cover;
 }
 
+/* Styling and aligning the piano with all keys*/
 .piano {
     display:flex;
     margin-top: 80px;
@@ -38,26 +43,29 @@ body {
     size: relative;
     /*overflow-x: auto;*/
 }
- /* height: calc(var(--width)*4);
-    width: var(--width); Fremdcode zum stylen des Klaviers, damit Tasten nebeneinander sind*/
+ /*  Fremdcode: height: calc(var(--width)*4); width: var(--width); 
+ Fremdcode zum stylen des Klaviers, damit Tasten nebeneinander sind*/
 .key {
     height: calc(var(--width)*4);
     width: var(--width);
 
 }
 
+/* Styling of the white keys e.g. width and the color*/
 .white {
-    /* --width: 75px;Fremdcode zum stylen des Klavies bzw. der weiÃŸen Tasten*/
+    /* Fremdcode: --width: 75px; Fremdcode zum stylen ausrichten des Klavies bzw. der weißen Tasten*/
     --width: 80px;
+    /*-----------------Ende des Fremdcodes----------------------------------*/
     background-color: white;
     border: 2px solid black;
     border-radius: 5px;
     min-width: 50px;
 }
 
+/*Styling of the white keys*/
 .black {
 
-    /*--width: 50px; Fremdcode zum stylen des Klavies bzw. der schwarzen Tasten */
+    /*Fremdcode --width: 50px; Fremdcode zum stylen und ausrichten des Klavies bzw. der schwarzen Tasten */
     --width: 50px;
     background-color: black;
     border: 2px solid black;
@@ -72,6 +80,7 @@ body {
     
 }
 
+/* Styling and aligning of the notes which are shown above the piano*/
 .shownotes {
     font-family:'Times New Roman', Times, serif;
     font-size:40px;
@@ -83,6 +92,7 @@ body {
     margin-top: 60px;
   }
 
+  /* Aligning of the white labels which are on the white keys*/
 .labelwhite {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     z-index: 3;
@@ -95,6 +105,7 @@ body {
     z-index: 1;
 }
 
+/*Alinging of the black labels which are on the black keys*/
 .labelblack{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     z-index: 3;
@@ -109,6 +120,7 @@ body {
 
 }
 
+/* Styling and aligning of the white notes which are on the piano - helps to know which sound plays which note*/
 .notelabelWhite{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     z-index: 1;
@@ -122,6 +134,7 @@ body {
     
 }
 
+/* Styling and aligning of the black notes which are on the piano - helps to know which sound plays which note*/
 .notelabelBlack{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     z-index: 3;
@@ -136,10 +149,12 @@ body {
     
 }
 
+/*Coloring the  white keys in function changeKeyColor()*/
 .activeWhite {
     background-color: #9400D3;
 }
 
+/*Coloring the black keys in function changeKeyColor()*/
 .activeBlack {
     background-color: #FF00FF;
 }
@@ -149,6 +164,7 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 10px;
 }
+/* Styling of the radio buttons, to aligning them*/
 #control .radio{
     size: 100px;
     border: violet;
@@ -163,7 +179,7 @@ body {
 }
 
 /* teilweise Fremdcode*/
-/* Curtain */
+/* Curtain - Styling of elements which are creating the curtain*/
 
 #begin {
 	z-index: 3;
@@ -178,6 +194,7 @@ body {
 	font-weight: 400;
 }
 
+/* Styling the show - when curtain is going away - shows also the text in the begining "Hello little rockstar..."*/
 #show {
 	position: center;
 	top: 45%;
@@ -189,6 +206,8 @@ body {
 	margin-top: 0px;
 	margin-left: 0px;
 }
+
+/*Aligning to open the curtain, after pressing ENTER*/ 
 #openCurtain {
 	top: 0;
 	left: 0;
@@ -198,6 +217,7 @@ body {
 	
 }
 
+/*Styling to open both sites - left and right*/
 #openCurtain .left,
 #openCurtain .right {
 	position: absolute;
@@ -211,6 +231,7 @@ body {
     z-index: 2;
 }
 
+/*Single styling of both sites*/
 #openCurtain .left {
 	left: 0;
 	transform-origin: top right;
@@ -239,6 +260,8 @@ body {
 #openCurtain.open .right {
 	filter: brightness(150%);
 }
+
+/* Animation to open both sites - left and right*/
 #openCurtain.open .left {
 	animation-fill-mode: forwards;
 	animation-name: curtain-opening, left-curtain-opening;
@@ -258,7 +281,7 @@ body {
 	animation-direction: normal, normal;
 }
 
-
+/* Fade-out the text of the beginning*/
 .hide {
 	animation-fill-mode: forwards;
 	animation-name: fade-out;
@@ -270,7 +293,6 @@ body {
 }
 
 /* Animation of the curtain*/
-
 
 @keyframes curtain-opening { /* 2s */
 	from { filter: brightness(180%); }
