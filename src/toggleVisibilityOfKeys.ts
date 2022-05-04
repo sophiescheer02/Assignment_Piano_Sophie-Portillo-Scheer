@@ -16,11 +16,11 @@ const whiteNotesToChange = Array.from(document.getElementsByClassName("notelabel
      ,blackNotesToChange = Array.from(document.getElementsByClassName("notelabelBlack") as HTMLCollectionOf<HTMLElement>)
      ,notesToChange = Array.from(new Set(whiteNotesToChange.concat(blackNotesToChange)));
 
-     /**
-      * Array: Same process for keys 
-      * An array is then created from this generic collection and written into the variables whiteKeysToChange and blackKeysToChange
-      * After both elements have been read into the arrays, whiteKeysToChange and blackKeysToChange are reduced to array keysToChange
-      */
+/**
+* Array: Same process for keys 
+* An array is then created from this generic collection and written into the variables whiteKeysToChange and blackKeysToChange
+* After both elements have been read into the arrays, whiteKeysToChange and blackKeysToChange are reduced to array keysToChange
+*/
 const whiteKeysToChange = Array.from(document.getElementsByClassName("labelwhite") as HTMLCollectionOf<HTMLElement>)
      ,blackKeysToChange = Array.from(document.getElementsByClassName("labelblack") as HTMLCollectionOf<HTMLElement>)
      ,keysToChange = Array.from(new Set(whiteKeysToChange.concat(blackKeysToChange)));
