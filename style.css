@@ -43,7 +43,7 @@ body {
     size: relative;
     /*overflow-x: auto;*/
 }
- /*  Fremdcode: height: calc(var(--width)*4); width: var(--width); 
+ /* Fremdcode: height: calc(var(--width)*4); width: var(--width); 
  Fremdcode zum stylen des Klaviers, damit Tasten nebeneinander sind*/
 .key {
     height: calc(var(--width)*4);
@@ -67,10 +67,11 @@ body {
 
     /*Fremdcode --width: 50px; Fremdcode zum stylen und ausrichten des Klavies bzw. der schwarzen Tasten */
     --width: 50px;
+    /*-----------------Ende des Fremdcodes----------------------------------*/
     background-color: black;
     border: 2px solid black;
-    /* margin-left: calc(var(--width)/-2);
-    margin-right: calc(var(--width)/-2); Fremdcode zum stylen des Klavies, damit Tasten an weiÃŸen Tasten ausgerichtet sind*/
+    /* Fremdcode: margin-left: calc(var(--width)/-2); margin-right: calc(var(--width)/-2);
+    Fremdcode zum stylen des Klavies, damit Tasten an weißen Tasten ausgerichtet werden*/
     margin-left: calc(var(--width)/-2);
     margin-right: calc(var(--width)/-2);
     z-index: 1;
