@@ -66,7 +66,7 @@ keyw.forEach(key => {
   });
 })
 
-//Black keys -Deklaration of variable ton was solved with an if-branching to assign a value
+//Black keys - Declaration of variable ton was solved with an if-branching to assign a value
 keyb.forEach(key => {
   key.addEventListener("click", () => {
     const ton = key.getAttribute("id");
