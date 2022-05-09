@@ -1,4 +1,4 @@
-//Function curtainOpenWithEnter() to open a curtain and start the show
+//Function curtainOpenWithEnter() to open a curtain and start the show with ENTER
 export function curtainOpenWithEnter(e: any):void
 {
     /**
